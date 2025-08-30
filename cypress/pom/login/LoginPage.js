@@ -36,6 +36,16 @@ class LoginPage {
         cy.get(this.loginButton).click();
     }
 
+    // input password kosong
+    PasswordEmpty() {
+        cy.get(this.passwordInput).should('have.value', '');
+    }
+
+    // input username kosong
+    UsernameEmpty() {
+        cy.get(this.usernameInput).should('have.value', '');
+    }
+
     // ==============================
     // Assertion Method
     // ==============================
@@ -51,16 +61,6 @@ class LoginPage {
         cy.get(this.errorMessage)
           .should('be.visible')
           .and('contain', message);
-    }
-
-    // Validasi input password kosong
-    PasswordEmpty() {
-        cy.get(this.passwordInput).should('have.value', '');
-    }
-
-    // Validasi input username kosong
-    UsernameEmpty() {
-        cy.get(this.usernameInput).should('have.value', '');
     }
 
     // Validasi pesan "Required" saat input kosong

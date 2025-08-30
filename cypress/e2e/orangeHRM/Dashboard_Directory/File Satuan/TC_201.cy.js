@@ -1,4 +1,4 @@
-import directory from "../../../pom/dashboard_directory/directory"; 
+import directory from "../../../../pom/dashboard_directory/directory"; 
 
 describe('OrangeHRM - Directory Test Case', () => {
     // Login sukses 
@@ -9,18 +9,13 @@ describe('OrangeHRM - Directory Test Case', () => {
         directory.clickLogin();
         directory.assertLoginSuccess();
     });
-    
 
-    //Cari berdasarkan location
-    it('Filter employee by Location', () => {
+    // Navigasi ke halaman Directory
+    it ('Visit Directory Page', () => {
         directory.interceptDirectory();
         directory.visitDirectory();
         directory.waitForDirectory();
-        directory.filterByLocation('Texas R&D');
-        directory.clickSearch();
-        directory.waitForDirectory();
-        directory.assertEmployeeFoundByLocation('Texas R&D');
-        directory.assertcardFoundByLocation('Texas R&D');
-    });
-    
+        directory.assertDirectoryPage();
+    })
+
 })

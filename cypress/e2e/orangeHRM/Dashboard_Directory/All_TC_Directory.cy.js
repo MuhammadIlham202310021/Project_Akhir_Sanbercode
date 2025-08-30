@@ -8,6 +8,7 @@ describe('OrangeHRM - Directory Test Case', () => {
         directory.enterPassword('admin123');    
         directory.clickLogin();
         directory.assertLoginSuccess();
+        cy.wait (10000)
     });
 
     it ('Visit Directory Page', () => {
@@ -19,23 +20,23 @@ describe('OrangeHRM - Directory Test Case', () => {
 
     it ('Search employee by name', () => {
         directory.interceptDirectory();
-        directory.waitForDirectory();
         directory.visitDirectory();
-        directory.clickSearch();
-        directory.employeeNameInput('Rohini Bhosle');
-        directory.assertEmployeeFound('Rohini Bhosle');
         directory.waitForDirectory();
+        directory.clickSearch();
+        directory.waitForDirectory();
+        directory.employeeNameInput('Test Data 1');
+        directory.assertEmployeeFound('Test Data 1');
     });
 
     it('Filter employee by Job Title', () => {
         directory.interceptDirectory();
         directory.visitDirectory();
         directory.waitForDirectory();
-        directory.filterByJobTitle('Account Assistant');
+        directory.filterByJobTitle('HR Manager');
         directory.clickSearch();
         directory.waitForDirectory();
-        directory.assertEmployeeFoundByJob('Account Assistant');
-        directory.assertcardFoundByJob('Account Assistant')
+        directory.assertEmployeeFoundByJob('HR Manager');
+        directory.assertcardFoundByJob('HR Manager')
     })
 
     it('Filter employee by Location', () => {

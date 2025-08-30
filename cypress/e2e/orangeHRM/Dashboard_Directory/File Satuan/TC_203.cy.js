@@ -1,4 +1,4 @@
-import directory from "../../../pom/dashboard_directory/directory"; 
+import directory from "../../../../pom/dashboard_directory/directory"; 
 
 describe('OrangeHRM - Directory Test Case', () => {
     // Login sukses 
@@ -15,11 +15,11 @@ describe('OrangeHRM - Directory Test Case', () => {
         directory.interceptDirectory();
         directory.visitDirectory();
         directory.waitForDirectory();
-        directory.filterByJobTitle('Account Assistant');
+        directory.filterByJobTitle('HR Manager');
         directory.clickSearch();
         directory.waitForDirectory();
-        directory.assertEmployeeFoundByJob('Account Assistant');
-        directory.assertcardFoundByJob('Account Assistant')
+        directory.assertEmployeeFoundByJob('HR Manager');
+        directory.assertcardFoundByJob('HR Manager')
     })
     
 })

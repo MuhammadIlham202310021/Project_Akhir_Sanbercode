@@ -1,4 +1,4 @@
-import forgotPassword from "../../../pom/forgot_password/forgotPassword";
+import forgotPassword from "../../../../pom/forgot_password/forgotPassword";
 
 describe('OrangeHRM - Forgot Password Test Case', () => {
     it ('Cek halaman lupa password', () => {
