@@ -1,4 +1,4 @@
-# Automation Testing Project
+# Cypress Automation Testing Project 
 
 ## Deskripsi
 
