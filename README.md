@@ -41,13 +41,13 @@ Pastikan telah terinstall:
 Clone repository:
 
 ```bash
-git clone https://github.com/username/nama-repository.git
+git clone https://github.com/MuhammadIlham202310021/Project_Akhir_Sanbercode
 ```
 
 Masuk ke folder project:
 
 ```bash
-cd nama-repository
+cd Project_Akhir_Sanbercode
 ```
 
 Install dependency:
