@@ -2,13 +2,11 @@
 
 ## Deskripsi
 
-Project ini digunakan untuk melakukan automation testing pada aplikasi menggunakan Cypress.
+Project ini digunakan sebagai proyek akhir di Bootcamp Quality Assurance di Sanbercode. Ini merupakan automation testing pada web https://opensource-demo.orangehrmlive.com/ dengan mengunakan Cypress 
 
 ## Teknologi yang Digunakan
 
-* Node.js
 * Cypress
-* JavaScript
 
 ## Struktur Folder
 
@@ -16,6 +14,14 @@ Project ini digunakan untuk melakukan automation testing pada aplikasi menggunak
 project-root/
 ├── cypress/
 │   ├── e2e/
+│       ├── orangeHRM/
+│           ├── Dashboard_Directory/
+│           ├── Forgot_Password/
+│           ├── Login/
+|   ├── pom/
+│       ├── dashboard_directory/
+│       ├── forgot_password/
+│       ├── login/
 │   ├── fixtures/
 │   ├── support/
 ├── cypress.config.js
@@ -48,6 +54,8 @@ Install dependency:
 
 ```bash
 npm install
+&
+npx cypress install
 ```
 
 ## Menjalankan Cypress
@@ -69,22 +77,6 @@ npx cypress run
 ```bash
 npx cypress run --browser chrome
 ```
-
-## Menjalankan Aplikasi yang Diuji
-
-Jika automation test memerlukan aplikasi yang sedang berjalan:
-
-```bash
-npm run dev
-```
-
-atau
-
-```bash
-npm start
-```
-
-Kemudian jalankan Cypress pada terminal yang berbeda.
 
 ## Test Case
 
@@ -108,4 +100,4 @@ cypress/e2e/dashboard.cy.js
 
 ## Author
 
-Nama Anda
+ILHAM_IL
